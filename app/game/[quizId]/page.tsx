@@ -166,7 +166,14 @@ export default function GamePage() {
         <p className="mb-6 text-lg">
           {player?.avatar} {player?.name}
         </p>
-        <button
+        <div className="flex gap-4 mb-8">
+          <button
+            onClick={() => (window.location.href = "/quiz-list")}
+            className="px-4 py-2 rounded-xl bg-purple-800 text-white font-bold hover:bg-purple-900"
+          >
+            👈 Kembali
+          </button>
+          <button
           onClick={() => {
             if (alreadyPlayed) {
               setFinished(true);
@@ -178,6 +185,7 @@ export default function GamePage() {
         >
           🚀 Mulai Quiz
         </button>
+        </div>
       </div>
     );
   }
@@ -198,17 +206,17 @@ export default function GamePage() {
 
         <p className="mb-6">Cek leaderboard untuk hasil akhir.</p>
         <div className="flex gap-4 mb-8">
+            <button
+            onClick={() => (window.location.href = "/quiz-list")}
+            className="px-4 py-2 rounded-xl bg-purple-800 text-white font-bold hover:bg-purple-900"
+          >
+            👈 Kembali
+          </button>
           <button
             onClick={() => setShowLeaderboard(true)}
             className="px-4 py-2 rounded-xl bg-yellow-400 text-purple-900 font-bold hover:bg-yellow-500"
           >
             🏆 Lihat Leaderboard
-          </button>
-          <button
-            onClick={() => (window.location.href = "/quiz-list")}
-            className="px-4 py-2 rounded-xl bg-purple-800 text-white font-bold hover:bg-purple-900"
-          >
-            👈 Kembali
           </button>
         </div>
 
